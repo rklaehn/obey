@@ -79,7 +79,7 @@ macro_rules! bitop_sub_not_all {
 
         #[quickcheck]
         fn sub_bitand_not(a: $test, b: $test) -> bool {
-            a.sub(&b) == a.bitand(&b.not())
+            (&a).sub(&b) == (&a).bitand(&b.not())
         }
 
         #[quickcheck]
